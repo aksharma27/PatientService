@@ -1,11 +1,21 @@
 package com.pm.patient_service.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.UUID;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PatientResponseDTO {
+
+    public PatientResponseDTO(UUID uuid, String johnDoe, int i) {
+    }
+
     public String getId() {
         return id;
     }

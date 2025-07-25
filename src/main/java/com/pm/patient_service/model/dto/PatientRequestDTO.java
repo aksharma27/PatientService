@@ -4,12 +4,16 @@ import com.pm.patient_service.model.dto.validators.CreatePatientValidationGroup;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PatientRequestDTO {
     @NotBlank(message = "Name is required")
     @Size(max = 100, message = "Name must be more than 100 characters")
@@ -21,6 +25,9 @@ public class PatientRequestDTO {
 
     @NotBlank(message = "Address is required")
     private String address;
+
+    public PatientRequestDTO(String johnDoe, int i) {
+    }
 
     public String getName() {
         return name;
