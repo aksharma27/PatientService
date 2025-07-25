@@ -4,8 +4,10 @@ import com.pm.patient_service.model.dto.PatientRequestDTO;
 import com.pm.patient_service.model.dto.PatientResponseDTO;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface PatientService {
-    public List<PatientResponseDTO> getPatients ();
-    public PatientResponseDTO createPatient (PatientRequestDTO patientRequestDTO);
+    List<PatientResponseDTO> getPatients ();
+    PatientResponseDTO createPatient (PatientRequestDTO patientRequestDTO);
+    PatientResponseDTO updatePatient (UUID id, PatientRequestDTO patientRequestDTO);
 }
