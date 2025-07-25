@@ -30,6 +30,14 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.h2database/h2
 	implementation 'com.h2database:h2:2.2.224'}
 
+test {
+	doLast {
+		if (testResults.testCount == 0) {
+			throw new GradleException("No test cases found!")
+		}
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }

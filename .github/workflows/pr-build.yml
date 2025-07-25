@@ -1,0 +1,4 @@
+on:
+jobs:
+  - name: Run Tests
+    run: ./gradlew test
